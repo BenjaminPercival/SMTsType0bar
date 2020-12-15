@@ -183,7 +183,7 @@ V1proj=[(c[34]+c[35]+c[20]+p*c[25]+q*c[29])%2+(c[18]+c[19]+1+c[1]+p*c[15]+q*c[16
           q*(c[27]+c[28]+c[16]+p*c[21]+1+c[3]))%2!=1 for p in range(0,2) for q in range(0,2)] 
 
 
-s.add(V2proj+V3proj) #V1proj
+s.add(V1proj+V2proj+V3proj) #V1proj
 
 # conditions on projection of twisted bosons: spinorials 
 
@@ -282,7 +282,7 @@ B1proj_pq=[(c[18]+c[19]+c[20]+1+c[1]+p*c[15]+q*c[16])%2+ \
 s.add(B1proj_pq+B2proj_pq+B3proj_pq) 
 
  
-#print(s.exprs())
+print(s.sexpr())
 print(s.check()) 
 
 while s.check() == sat: 
